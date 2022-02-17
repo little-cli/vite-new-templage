@@ -21,7 +21,7 @@ module.exports = {
   rules: {
     semi: 0,
     'no-undef': 'error',
-    'no-unused-vars': 'error',
+    'no-unused-vars': 'off',
     'vue/multi-word-component-names': 0,
     '@typescript-eslint/no-non-null-assertion': 'off'
   }
