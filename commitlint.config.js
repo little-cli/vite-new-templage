@@ -27,7 +27,7 @@ module.exports = {
     'type-empty': [2, 'never'],
     'type-enum': [2, 'always', types], // type类型
     'scope-case': [0, 'always'], // 单词格式
-    'scope-empty': [2, 'never'], // scope 允许为空
+    'scope-empty': [0, 'never'], // scope 允许为空
     'subject-empty': [2, 'never'], //
     'subject-case': [0, 'never'],
     'header-max-length': [2, 'always', 88],
