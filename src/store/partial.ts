@@ -10,7 +10,7 @@ export default defineStore('permission', {
 
   actions: {
     setRoot() {
-      // 或 有1则未1 0000 0001 -> 0001
+      // 或 有1则为1 0000 0001 -> 0001
       this.ROLE |= PERMISSION.ROOT
     },
     setRootAndSuper() {

@@ -8,8 +8,8 @@ export default defineComponent({
   setup() {
     const store = usePermissionStore()
     const { ROLE, isRoot, isRootAndSuper } = storeToRefs(store)
-    console.log(store, 'store')
-
+    console.log(ROLE, isRoot, isRootAndSuper, 'store')
+    console.log(import.meta.env)
     // use mapActions cant find right this
     let { setRoot, setRootAndSuper, clearRoot, toggleRoot } = mapActions(usePermissionStore, [
       'setRoot',
@@ -23,14 +23,12 @@ export default defineComponent({
     clearRoot = clearRoot.bind(store)
     toggleRoot = toggleRoot.bind(store)
 
-    console.log(setRoot, 'setRoot')
-
     return () => (
       <>
         <h2>Permission</h2>
         <h3>role: {ROLE.value}</h3>
-        {isRoot ? <h3>root can see </h3> : null}
-        {isRootAndSuper ? <h3>root&super can see </h3> : null}
+        {isRoot.value ? <h3>root can see </h3> : null}
+        {isRootAndSuper.value ? <h3>root&super can see </h3> : null}
         <ElButton type={'danger'} onClick={setRoot}>
           setRoot
         </ElButton>
